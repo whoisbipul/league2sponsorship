@@ -3,111 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DGO | Sponsorship Playbook - ICC CWC League II</title>
+    <title>DGO | Sponsorship Playbook - ICC CWCL II</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Montserrat', sans-serif; background-color: #020617; color: #f8fafc; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #020617; 
+            color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Background Setup */
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.4), rgba(2, 6, 23, 1)), 
+                        url('assets/league2.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+        }
+
+        /* Title Animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-title {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-delay-1 { animation-delay: 0.3s; opacity: 0; }
+        .animate-delay-2 { animation-delay: 0.6s; opacity: 0; }
+
+        /* Bento Styling */
         .bento-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            border-radius: 28px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(12px);
         }
         .bento-card:hover {
-            transform: translateY(-5px);
+            transform: scale(1.02);
             border-color: #3B82F6;
-            background: rgba(59, 130, 246, 0.05);
+            background: rgba(59, 130, 246, 0.08);
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #3B82F6, #22C55E);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+
+        .glass-nav {
+            background: rgba(2, 6, 23, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
     </style>
 </head>
-<body class="p-6 md:p-12">
+<body>
 
-    <!-- Header -->
-    <header class="max-w-7xl mx-auto mb-16 flex justify-between items-center">
-        <div>
-            <h1 class="text-4xl font-800 tracking-tighter uppercase">DGO <span class="text-blue-500">Digital</span></h1>
-            <p class="text-gray-400 font-light">Sponsorship Playbook 2026</p>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav px-8 py-4 flex justify-between items-center">
+        <div class="text-2xl font-900 tracking-tighter">DGO <span class="text-blue-500">DIGITAL</span></div>
+        <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest">
+            <a href="#about" class="hover:text-blue-400 transition">About</a>
+            <a href="#audience" class="hover:text-blue-400 transition">Audience</a>
+            <a href="#packages" class="hover:text-blue-400 transition">Packages</a>
+            <a href="#" class="bg-blue-600 px-4 py-2 rounded-full">Contact Us</a>
         </div>
-        <div class="hidden md:block">
-            <span class="px-4 py-2 border border-green-500 rounded-full text-green-500 text-sm font-bold uppercase tracking-widest">
-                ICC CWC League II
-            </span>
-        </div>
-    </header>
+    </nav>
 
-    <!-- Main Bento Grid -->
-    <main class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+    <!-- PAGE 1: HERO INTRODUCTION -->
+    <section class="hero-bg flex flex-col justify-center items-center text-center px-6">
+        <div class="max-w-5xl">
+            <h2 class="animate-title animate-delay-1 text-blue-500 font-bold tracking-[0.3em] uppercase mb-4">
+                Official Digital Partner
+            </h2>
+            <h1 class="animate-title animate-delay-2 text-5xl md:text-8xl font-900 leading-tight mb-8">
+                ICC CWCL II: <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-400 to-green-400">
+                    NEP, OMN, UAE
+                </span>
+            </h1>
+            <p class="animate-title animate-delay-2 text-xl md:text-2xl font-light text-gray-300 tracking-wide uppercase">
+                Sponsorship Playbook 2026
+            </p>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 animate-bounce">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- PAGE 2: BENTO CONTENT -->
+    <main id="about" class="max-w-7xl mx-auto py-24 px-6">
         
-        <!-- Hero Card (Big) -->
-        <div class="md:col-span-3 md:row-span-2 bento-card p-10 flex flex-col justify-end min-h-[400px] relative overflow-hidden">
-            <div class="absolute top-0 right-0 p-8 opacity-20 text-9xl font-extrabold italic">LIVE</div>
-            <h2 class="text-5xl font-800 mb-4 leading-tight">Nepal • UAE • Oman<br><span class="gradient-text text-6xl">Tri-Series 2026</span></h2>
-            <p class="text-gray-300 max-w-lg">Capture the pulse of millions. Partner with DGO to broadcast your brand to every cricket fan across the digital landscape during the most anticipated ODI series.</p>
-        </div>
-
-        <!-- Audience Card (Tall) -->
-        <div class="md:col-span-1 md:row-span-2 bento-card p-8 flex flex-col items-center justify-center text-center">
-            <div class="text-6xl mb-4">📈</div>
-            <h3 class="text-3xl font-bold text-blue-400">2.5M+</h3>
-            <p class="text-gray-400 text-sm">Estimated Digital Reach</p>
-            <div class="mt-8 space-y-4 w-full">
-                <div class="bg-white/5 p-3 rounded-xl text-xs flex justify-between">
-                    <span>Peak Concurrent</span>
-                    <span class="font-bold">450K+</span>
-                </div>
-                <div class="bg-white/5 p-3 rounded-xl text-xs flex justify-between">
-                    <span>App Installs</span>
-                    <span class="font-bold">1.2M+</span>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            
+            <!-- Vision Card -->
+            <div class="md:col-span-2 bento-card p-10">
+                <span class="text-blue-500 text-sm font-bold uppercase tracking-widest">The Platform</span>
+                <h3 class="text-3xl font-bold mt-4 mb-6">Why DGO?</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    We aren't just broadcasting matches; we are creating a digital stadium. With low-latency 4K streaming and interactive fan engagement, DGO is where the modern cricket fan lives.
+                </p>
             </div>
-        </div>
 
-        <!-- Package Card 1 -->
-        <div class="md:col-span-1 bento-card p-8 hover:bg-blue-600/10 group cursor-pointer">
-            <h4 class="text-blue-400 font-bold mb-2">Platinum</h4>
-            <p class="text-2xl font-bold mb-4">Title Partner</p>
-            <ul class="text-xs text-gray-400 space-y-2 group-hover:text-gray-200">
-                <li>• Exclusive Bug Integration</li>
-                <li>• 15s Pre-roll Adverts</li>
-                <li>• Logo on Highlights</li>
-            </ul>
-        </div>
-
-        <!-- Package Card 2 -->
-        <div class="md:col-span-1 bento-card p-8">
-            <h4 class="text-green-400 font-bold mb-2">Gold</h4>
-            <p class="text-2xl font-bold mb-4">Powered By</p>
-            <ul class="text-xs text-gray-400 space-y-2">
-                <li>• Mid-roll Ad Breaks</li>
-                <li>• Social Media Shoutouts</li>
-                <li>• Branded Scorecard</li>
-            </ul>
-        </div>
-
-        <!-- Interactive Map/Venue Card -->
-        <div class="md:col-span-2 bento-card p-8 flex items-center bg-gradient-to-br from-green-900/20 to-blue-900/20">
-            <div>
-                <h4 class="font-bold mb-2">Venue</h4>
-                <p class="text-xl font-bold">TU Cricket Ground</p>
-                <p class="text-gray-400 text-sm italic">Kirtipur, Nepal</p>
+            <!-- Fast Stats -->
+            <div class="md:col-span-1 bento-card p-10 flex flex-col justify-center text-center border-b-4 border-b-blue-500">
+                <h4 class="text-5xl font-900 mb-2">10M+</h4>
+                <p class="text-gray-400 text-xs uppercase tracking-widest">Impressions</p>
             </div>
-            <div class="ml-auto opacity-40">
-                <!-- Simple SVG Icon of Stadium -->
-                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg>
-            </div>
-        </div>
 
+            <div class="md:col-span-1 bento-card p-10 flex flex-col justify-center text-center border-b-4 border-b-green-500">
+                <h4 class="text-5xl font-900 mb-2">120m</h4>
+                <p class="text-gray-400 text-xs uppercase tracking-widest">Watch Minutes</p>
+            </div>
+
+            <!-- More content cards go here -->
+            <div class="md:col-span-4 bento-card p-10 bg-gradient-to-r from-blue-900/20 to-transparent">
+                <h3 class="text-2xl font-bold mb-4">Ready to reach the fans?</h3>
+                <p class="text-gray-400 mb-6">Explore our tailored sponsorship slots designed for maximum brand recall.</p>
+                <button class="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-blue-500 hover:text-white transition">View Packages</button>
+            </div>
+
+        </div>
     </main>
 
-    <footer class="max-w-7xl mx-auto mt-20 text-center text-gray-500 text-sm pb-10">
-        &copy; 2026 DGO Digital Broadcasting. All Rights Reserved.
+    <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">
+        &copy; 2026 DGO DIGITAL BROADCASTING | ICC CWCL II PLAYBOOK
     </footer>
 
 </body>
